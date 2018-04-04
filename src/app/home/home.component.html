@@ -5,6 +5,10 @@
 	<div class="col">
 		<p>Your bucket list ({{ itemCount}})</p>
 	</div>
+	<div class = "col">
+		<p>You have done of them!</p>
+		
+	</div>
 </div>
 <div class="container color-light" [@goals]="goals.length">
 	<div class="col">
@@ -20,4 +24,10 @@
 			{{ goal }}
 		</p>	
 	</div>
+	<div class="col">
+		<p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+			{{ done }}
+		</p>	
+	</div>
+
 </div>
